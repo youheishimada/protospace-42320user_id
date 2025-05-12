@@ -1,0 +1,14 @@
+<div class="card">
+  <div class="card__img">
+    <% if prototype.image.attached? %>
+      <%= link_to prototype_path(prototype), data: { turbo: false } do %>
+        <%= image_tag prototype.image %>
+      <% end %>
+    <% else %>
+      <p>画像なし</p>
+    <% end %>
+  </div>
+  <span class="card__title"><%= prototype.title %></span>
+  <p class="card__summary"><%= prototype.catch_copy %></p>
+  <span class="card__user"><%= prototype.user.name %></span>
+</div>

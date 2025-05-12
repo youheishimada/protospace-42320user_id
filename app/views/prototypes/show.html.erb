@@ -1,0 +1,18 @@
+<div class="prototype__wrapper">
+  <h1 class="prototype__hedding"><%= @prototype.title %></h1>
+  <span class="prototype__user"><%= @prototype.user.name %></span>
+
+  <div class="prototype__image">
+    <%= image_tag @prototype.image if @prototype.image.attached? %>
+  </div>
+
+  <div class="prototype__detail">
+    <p class="detail__title">キャッチコピー</p>
+    <p><%= @prototype.catch_copy %></p>
+  </div>
+
+  <div class="prototype__detail">
+    <p class="detail__title">コンセプト</p>
+    <p><%= @prototype.concept %></p>
+  </div>
+</div>

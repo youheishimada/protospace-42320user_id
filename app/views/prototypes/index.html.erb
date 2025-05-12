@@ -1,20 +1,3 @@
-<h1 class="page-heading"></h1>
-
-   <% if user_signed_in? %>
-  <p class="greeting">こんにちは、<%= current_user.name %> さん！</p>
-<% end %>
-
 <div class="card__wrapper">
-  <% @prototypes.each do |prototype| %>
-    <div class="card">
-      <div class="card__img">
-        <% if prototype.image.attached? %>
-          <%= image_tag prototype.image %>
-        <% end %>
-      </div>
-      <span class="card__title"><%= prototype.title %></span>
-      <p class="card__summary"><%= prototype.catch_copy %></p>
-      <span class="card__user"><%= prototype.user.name %></span>
-    </div>
-  <% end %>
+  <%= render partial: "prototype", collection: @prototypes, as: :prototype %>
 </div>
